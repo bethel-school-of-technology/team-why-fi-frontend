@@ -8,6 +8,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { NavagationComponent } from './navagation/navagation.component';
 import { FooterComponent } from './footer/footer.component';
 import { AboutUsComponent } from './about-us/about-us.component';
+import { LocationsComponent } from './locations/locations.component';
 
 
 const routes: Routes = [
@@ -17,7 +18,8 @@ const routes: Routes = [
   { path: 'review', component: ReviewsComponent },
   { path: 'Navagation', component: NavagationComponent },
   { path: 'Footer', component: FooterComponent },
-  { path: 'About Us', component: AboutUsComponent},
+  { path: 'About-Us', component: AboutUsComponent},
+  { path: 'locations', component: LocationsComponent},
 
 
   { path: '', redirectTo: '/home', pathMatch: 'full' }, // Default route

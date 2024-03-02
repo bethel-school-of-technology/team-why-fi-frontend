@@ -10,6 +10,7 @@ import { NavagationComponent } from './navagation/navagation.component';
 import { FooterComponent } from './footer/footer.component';
 
 import {MatButtonModule} from '@angular/material/button';
+import { LocationsComponent } from './locations/locations.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import {MatButtonModule} from '@angular/material/button';
     PageNotFoundComponent,
     AboutUsComponent,
     NavagationComponent,
-    FooterComponent
+    FooterComponent,
+    LocationsComponent
   ],
   imports: [
     BrowserModule,
