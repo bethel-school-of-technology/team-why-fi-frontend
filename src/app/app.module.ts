@@ -4,7 +4,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { NavagationComponent } from './navagation/navagation.component';
 import { FooterComponent } from './footer/footer.component';
@@ -18,6 +17,7 @@ import { ReviewsComponent } from './reviews/reviews.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { Location } from './models/location';
+import { FavoritesComponent } from './favorites/favorites.component';
 
 
 
@@ -25,14 +25,15 @@ import { Location } from './models/location';
   declarations: [
     AppComponent,
     HomeComponent,
-    PageNotFoundComponent,
+    FavoritesComponent,
     AboutUsComponent,
     NavagationComponent,
     FooterComponent,
     LocationsComponent,
     LoginComponent,
     SignUpComponent,
-    ReviewsComponent
+    ReviewsComponent,
+    FavoritesComponent
   ],
   imports: [
     BrowserModule,

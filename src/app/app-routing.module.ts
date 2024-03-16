@@ -4,7 +4,7 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { SignUpComponent } from './signup/signup.component';
 import { ReviewsComponent } from './reviews/reviews.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { FavoritesComponent } from './favorites/favorites.component';
 import { NavagationComponent } from './navagation/navagation.component';
 import { FooterComponent } from './footer/footer.component';
 import { AboutUsComponent } from './about-us/about-us.component';

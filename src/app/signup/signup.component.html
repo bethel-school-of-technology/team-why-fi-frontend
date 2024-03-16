@@ -3,13 +3,14 @@
 <form (ngSubmit)="signUp()">
     <!-- <img class="icon" src="" alt="Logo"> -->
     <h1>Create Account</h1>
-    <input placeholder="Enter First Name" [(ngModel)]="newUser.firstName" type="text" name="firstName" ><br><br>
-    
-    <input placeholder="Enter Last Name" [(ngModel)]="newUser.lastName" type="text" name="lastName" ><br><br>
-    
-    <input placeholder="Enter Username" [(ngModel)]="newUser.username" type="text" name="username" ><br><br>
-    
-    <input placeholder="Enter Password" [(ngModel)]="newUser.password" type="text" name="password" ><br><br>
+    <label for="FirstName">First Name</label>
+    <input placeholder="Enter First Name" [(ngModel)]="newUser.firstName" type="text" name="firstName" >
+    <label for="LastName">Last Name</label>
+    <input placeholder="Enter Last Name" [(ngModel)]="newUser.lastName" type="text" name="lastName" >
+    <label for="username">Username</label>
+    <input placeholder="Enter Username" [(ngModel)]="newUser.username" type="text" name="username" >
+    <label for="Password">Password</label>
+    <input placeholder="Enter Password" [(ngModel)]="newUser.password" type="text" name="password" >
     
     <button>
       Sign Up

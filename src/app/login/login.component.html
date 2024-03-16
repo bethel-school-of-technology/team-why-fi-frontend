@@ -5,24 +5,26 @@
       <h1>Log In Here</h1>
     
     <form (submit)="onSubmit()" novalidate>
-      <label for="firstName">First Name</label> 
+      <!-- <label for="firstName">First Name</label> 
       <input type="text" name="firstName" [(ngModel)]="user.firstName" placeholder="Enter First Name">
 
       <label for="lastName">Last Name</label>
-      <input type="lastName" name="lastName" [(ngModel)]="user.lastName" placeholder="Enter Last Name">
+      <input type="lastName" name="lastName" [(ngModel)]="user.lastName" placeholder="Enter Last Name"> -->
 
       <label for="username">Username</label> <!--USERNAME-->
       <input type="text" name="username" [(ngModel)]="user.username" placeholder="Enter Username">
 
       <label for="password">Password</label> <!--PASSWORD-->
-      <input type="password" name="password" [(ngModel)]="user.password" placeholder="Enter Password">
+      <input type="text" name="password" [(ngModel)]="user.password" placeholder="Enter Password">
       
       
       <input type="submit" value="Log In" />
+      <br>
       
 
       <a href="#">Forgot your password?</a><br>
       <a href="#">Create an account</a>
+
     </form>
     </div>
   </body>

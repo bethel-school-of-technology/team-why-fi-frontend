@@ -1,5 +1,5 @@
 // import { Component, OnInit } from '@angular/core';
-// // import { LocationService } from './location.service';
+// import { LocationService } from './location.service';
 // import { Observable } from 'rxjs';
 
 
@@ -12,6 +12,7 @@
 //     posts: any[] = []; // Initialize an empty array for posts
 //     post: any;
 //     locations: any;
+//     LocationService: any;
   
 //     constructor(private LocationComponent: LocationService) {}
   
