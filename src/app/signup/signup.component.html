@@ -12,12 +12,12 @@
     <label for="Password">Password</label>
     <input placeholder="Enter Password" [(ngModel)]="newUser.password" type="text" name="password" >
     
-    <button>
+    <button a routerLink="/home" title="Home page">
       Sign Up
     </button>
     <p>
         Already have an account? <br><br>
-        <a routerLink="/signin" title="Sign In">Sign In</a>
+        <a routerLink="/login" title="Log In">Log In</a>
     </p>
 </form>
 </div>
