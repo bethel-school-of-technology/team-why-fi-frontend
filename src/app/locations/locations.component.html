@@ -9,6 +9,7 @@
 <body>
 
     <div class="locations-container">
+       
 
         <div class="location">
             <h2>New York City</h2>
@@ -124,7 +125,33 @@
             <button class="submit-btn">Submit</button>
         </div>
 
-    </div>
+            <div class="upload-section">
+                <h2>Upload Your Own Post</h2>
+                <form action="upload.php" method="POST" enctype="multipart/form-data">
+                    <input type="file" name="fileToUpload" id="fileToUpload">
+                    
+                    <!-- Star Rating -->
+                    <div class="star-rating">
+                        <input type="radio" id="star5" name="rating" value="5">
+                        <label for="star5">&#9733;</label>
+                        <input type="radio" id="star4" name="rating" value="4">
+                        <label for="star4">&#9733;</label>
+                        <input type="radio" id="star3" name="rating" value="3">
+                        <label for="star3">&#9733;</label>
+                        <input type="radio" id="star2" name="rating" value="2">
+                        <label for="star2">&#9733;</label>
+                        <input type="radio" id="star1" name="rating" value="1">
+                        <label for="star1">&#9733;</label>
+                    </div>
+                    
+                    <textarea class="review-textarea" placeholder="Leave a review" name="review"></textarea>
+                    <input type="submit" value="Upload Post" name="submit">
+                </form>
+            </div>
+            
+        </div>
+        <br>
+
 
 </body>
 </html>
