@@ -9,8 +9,16 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { NavagationComponent } from './navagation/navagation.component';
 import { FooterComponent } from './footer/footer.component';
 
-import {MatButtonModule} from '@angular/material/button';
+import { MatButtonModule } from '@angular/material/button';
 import { LocationsComponent } from './locations/locations.component';
+import { RouterModule } from '@angular/router';
+import { LoginComponent } from './login/login.component';
+import { SignUpComponent } from './signup/signup.component';
+import { ReviewsComponent } from './reviews/reviews.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { Location } from './models/location';
+
 
 
 @NgModule({
@@ -21,14 +29,22 @@ import { LocationsComponent } from './locations/locations.component';
     AboutUsComponent,
     NavagationComponent,
     FooterComponent,
-    LocationsComponent
+    LocationsComponent,
+    LoginComponent,
+    SignUpComponent,
+    ReviewsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MatButtonModule
+    MatButtonModule,
+    RouterModule,
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
