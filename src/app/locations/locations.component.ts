@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LocationService } from '../services/location.service';
 
 @Component({
   selector: 'app-locations',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrl: './locations.component.css'
 })
 export class LocationsComponent {
+
+  constructor(private service: LocationService) {}
 
 }

@@ -1,6 +1,5 @@
-// import { Component, OnInit } from '@angular/core';
+import { Component, Injectable, OnInit } from '@angular/core';
 // import { LocationService } from './location.service';
-// import { Observable } from 'rxjs';
 
 
 // @Component({
@@ -8,13 +7,17 @@
 //     templateUrl: './location.component.html',
 //     styleUrls: ['./location.component.css']
 //   })
-//   export class LocationService implements OnInit {
+
+//   // @Injectable({providedIn: 'root'})
+//   export interface LocationService implements OnInit {
 //     posts: any[] = []; // Initialize an empty array for posts
 //     post: any;
 //     locations: any;
-//     LocationService: any;
+//     LocationService: any; //http://localhost:5256/api/Location //link connecting backend
+    
+        
   
-//     constructor(private LocationComponent: LocationService) {}
+//     constructor(private LocationComponent: LocationService) { }
   
 //     ngOnInit(): void {
 //       this.getAllPosts(); 
@@ -32,8 +35,8 @@
 //       );
 //     }
   
-//     createPost(message: string, imgUrl?: string): void {
-//       const newPost = { message, imgUrl };
+//     createPost(Message: string, ImgUrl?: string): void {
+//       const newPost = { Message, ImgUrl };
 //       this.LocationService.createPost(newPost).subscribe(
 //         () => {
 //           console.log('Post created successfully');
