@@ -9,7 +9,7 @@ import { NavagationComponent } from './navagation/navagation.component';
 import { FooterComponent } from './footer/footer.component';
 
 import { MatButtonModule } from '@angular/material/button';
-import { LocationsComponent } from './locations/locations.component';
+// import { LocationsComponent } from './locations/locations.component';
 import { RouterModule } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { SignUpComponent } from './signup/signup.component';
@@ -29,7 +29,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     AboutUsComponent,
     NavagationComponent,
     FooterComponent,
-    LocationsComponent,
+    // LocationsComponent,
     LoginComponent,
     SignUpComponent,
     ReviewsComponent,
