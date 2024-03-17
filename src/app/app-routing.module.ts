@@ -9,6 +9,7 @@ import { NavagationComponent } from './navagation/navagation.component';
 import { FooterComponent } from './footer/footer.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { LocationsComponent } from './locations/locations.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
 
@@ -22,9 +23,11 @@ const routes: Routes = [
   { path: 'Footer', component: FooterComponent },
   { path: 'About-Us', component: AboutUsComponent},
   { path: 'locations', component: LocationsComponent},
+  { path: 'favorites', component: FavoritesComponent},
 
 
-  // { path: '**', component: PageNotFoundComponent } // Redirect to home for unknown routes
+
+ { path: '**', component: PageNotFoundComponent } // Redirect to home for unknown routes
 ];
 
 @NgModule({

@@ -16,8 +16,8 @@ import { SignUpComponent } from './signup/signup.component';
 import { ReviewsComponent } from './reviews/reviews.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { Location } from './models/location';
 import { FavoritesComponent } from './favorites/favorites.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
 
@@ -33,7 +33,9 @@ import { FavoritesComponent } from './favorites/favorites.component';
     LoginComponent,
     SignUpComponent,
     ReviewsComponent,
-    FavoritesComponent
+    FavoritesComponent,
+    PageNotFoundComponent,
+
   ],
   imports: [
     BrowserModule,
