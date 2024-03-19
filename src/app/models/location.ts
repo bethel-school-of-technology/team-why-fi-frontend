@@ -1,13 +1,13 @@
 export class Location {
-    LocationID?: string;
-    Message?: string;
-    ImgUrl: any;
-    Location?: string;
+    postId?: string;
+    message?: string;
+    imgUrl: any;
+    location?: string;
 
-    constructor(LocationID?: string, Message?: string, ImgUrl?: any, Location?: string) {
-        this.LocationID = LocationID;
-        this.Message = Message;
-        this.ImgUrl = ImgUrl;
-        this.Location = Location;
+    constructor(postId?: string, message?: string, imgUrl?: any, location?: string) {
+        this.postId = postId;
+        this.message = message;
+        this.imgUrl = imgUrl;
+        this.location = location;
     }
 }

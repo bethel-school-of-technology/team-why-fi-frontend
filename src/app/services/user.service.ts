@@ -19,7 +19,7 @@ import { tap } from "rxjs";
   
   signUp(newUser: User){
     this._user= newUser;
-    return this.http.post(`${this.baseURL}/register`, newUser);
+    return this.http.post(`${this.baseURL}/api/Auth/register`, newUser);
   }
   get isLoggedIn(): boolean{
     return this._isloggedin;
@@ -37,7 +37,7 @@ import { tap } from "rxjs";
   
   login(user: User){
   
-    return this.http.post(`${this.baseURL}/login`, user, { responseType: 'text' })
+    return this.http.get(`${this.baseURL}/api/Auth/login?username=${user.username}&password=${user.password}`, { responseType: 'text' })
       .pipe(tap((response: any) => {
         localStorage.setItem('myPostToken', response);
         this._isloggedin=true
