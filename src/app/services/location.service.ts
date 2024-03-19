@@ -1,39 +1,31 @@
-import { Component, Injectable, OnInit } from '@angular/core';
-// import { LocationService } from './location.service';
+import { Injectable } from "@angular/core";
+import { HttpClient } from "@angular/common/http";
+import { Observable } from "rxjs";
+import { Location } from "../models/location";
 
 
-// @Component({
-//     selector: 'app-location',
-//     templateUrl: './location.component.html',
-//     styleUrls: ['./location.component.css']
-//   })
 
-//   // @Injectable({providedIn: 'root'})
-//   export interface LocationService implements OnInit {
-//     posts: any[] = []; // Initialize an empty array for posts
-//     post: any;
-//     locations: any;
-//     LocationService: any; //http://localhost:5256/api/Location //link connecting backend
+@Injectable({
+    providedIn: 'root'
+  })
+  export class LocationService {
+    posts: any[] = []; // Initialize an empty array for posts
+    post: any;
+    locations: any;
+    url: string = 'http://localhost:5256/api/Location' //link connecting backend
     
         
   
-//     constructor(private LocationComponent: LocationService) { }
+     constructor(public http: HttpClient) { }
   
-//     ngOnInit(): void {
-//       this.getAllPosts(); 
-//     }
-  
-//     getAllPosts(): void {
-//       this.LocationService.getAllPosts().subscribe(
-//         (posts: any[]) => {
-//           this.posts = posts; // Assign fetched posts to the component property
-//         },
-//         (error: any) => {
-//           console.error('Error fetching posts:', error);
-//           // Handle the error (e.g., show an error message to the user)
-//         }
-//       );
-//     }
+
+   getAllPosts(): Observable<Location[]> {
+      return this.http.get<Location[]>(this.url);
+   }
+
+   createPost(location: Location) {
+      return this.http.post(this.url, location);
+   }
   
 //     createPost(Message: string, ImgUrl?: string): void {
 //       const newPost = { Message, ImgUrl };
@@ -85,6 +77,6 @@ import { Component, Injectable, OnInit } from '@angular/core';
 //           });
 //     }
 
-//   }
+   }
 
 
