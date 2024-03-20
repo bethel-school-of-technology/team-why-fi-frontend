@@ -9,14 +9,14 @@ import { NavagationComponent } from './navagation/navagation.component';
 import { FooterComponent } from './footer/footer.component';
 
 import { MatButtonModule } from '@angular/material/button';
-// import { LocationsComponent } from './locations/locations.component';
+import { LocationsComponent } from './locations/locations.component';
 import { RouterModule } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { SignUpComponent } from './signup/signup.component';
 import { ReviewsComponent } from './reviews/reviews.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { FavoritesComponent } from './favorites/favorites.component';
+// import { FavoritesComponent } from './favorites/favorites.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
@@ -25,15 +25,14 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
   declarations: [
     AppComponent,
     HomeComponent,
-    FavoritesComponent,
+    // FavoritesComponent,
     AboutUsComponent,
     NavagationComponent,
     FooterComponent,
-    // LocationsComponent,
+    LocationsComponent,
     LoginComponent,
     SignUpComponent,
     ReviewsComponent,
-    FavoritesComponent,
     PageNotFoundComponent,
 
   ],

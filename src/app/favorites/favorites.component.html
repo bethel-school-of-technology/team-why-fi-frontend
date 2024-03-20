@@ -1,5 +1,65 @@
-
 <body>
+
+    <h1>Favorite Locations</h1>
+
+    <div class="sort-container">
+        <label for="sort">Sort by Rating:</label>
+        <select id="sort" onchange="sortLocations()">
+            <option value="highToLow">High to Low</option>
+            <option value="lowToHigh">Low to High</option>
+        </select>
+    </div>
+
+    <div class="locations-container">
+        <div *ngFor="let location of reviewList">
+          {{ location.location }} 
+          <img [src]="location.imgUrl" alt="Location Image" /> 
+        </div>
+      </div>
+
+    <div class="review-container">
+        <h2>Add Review</h2>
+        <textarea id="review-text" placeholder="Leave your review here..."></textarea>
+        <input type="file" id="photo" accept="image/*" onchange="previewPhoto(event)">
+        <button onclick="addReview()">Submit Review</button>
+        <button onclick="deleteReview()">Delete Review</button>
+    </div>
+
+    <div class="navigation">
+        <a routerLink="/locations" title="locations">Back to Locations</a>
+    </div>
+
+
+
+
+    <!-- <script>
+        function sortLocations() {
+            const sortValue = document.getElementById('sort').value;
+            const locationsContainer = document.querySelector('.locations-container');
+            const locations = Array.from(locationsContainer.children);
+
+            const sortedLocations = locations.sort((a, b) => {
+                const ratingA = parseFloat(a.dataset.rating);
+                const ratingB = parseFloat(b.dataset.rating);
+                
+                if (sortValue === 'highToLow') {
+                    return ratingB - ratingA;
+                } else {
+                    return ratingA - ratingB;
+                }
+            });
+
+            locationsContainer.innerHTML = '';
+            sortedLocations.forEach(location => {
+                locationsContainer.appendChild(location);
+            });
+        }
+
+        
+    </script> -->
+</body>
+
+<!-- <body>
 
     <h1>Favorite Locations</h1>
 
@@ -52,4 +112,4 @@
             alert('Review submitted successfully!');
         }
     </script>
-</body>
+</body> -->
