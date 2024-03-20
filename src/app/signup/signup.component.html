@@ -1,7 +1,14 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+</head>
+
 <body>
   <div class="SignUp-box">
-<form (ngSubmit)="signUp()">
-    <!-- <img class="icon" src="" alt="Logo"> -->
+<form (ngSubmit)="signUp()"> 
+    <!-- <img class="icon" src="" alt="Logo"> --> 
     <h1>Create Account</h1>
     <label for="FirstName">First Name</label>
     <input placeholder="Enter First Name" [(ngModel)]="newUser.firstName" type="text" name="firstName" >
@@ -23,3 +30,4 @@
 </div>
 </body>
   
+</html>

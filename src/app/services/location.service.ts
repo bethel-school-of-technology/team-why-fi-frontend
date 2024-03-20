@@ -5,10 +5,22 @@ import { Location } from "../models/location";
 
 
 
+
 @Injectable({
     providedIn: 'root'
   })
   export class LocationService {
+   
+  deleteReview(arg0: string) {
+    throw new Error('Method not implemented.');
+  }
+   LocationService: any;
+  getAllReviews() {
+    throw new Error('Method not implemented.');
+  }
+  getLocationsByID(locationId: any) {
+    throw new Error('Method not implemented.');
+  }
     posts: any[] = []; // Initialize an empty array for posts
     post: any;
     locations: any;
@@ -16,66 +28,63 @@ import { Location } from "../models/location";
     
         
   
-     constructor(public http: HttpClient) { }
+     constructor(public http: HttpClient, private locationService: LocationService) { }
   
 
    getAllPosts(): Observable<Location[]> {
       return this.http.get<Location[]>(this.url);
    }
-
-   createPost(location: Location) {
-      return this.http.post(this.url, location);
-   }
   
-//     createPost(Message: string, ImgUrl?: string): void {
-//       const newPost = { Message, ImgUrl };
-//       this.LocationService.createPost(newPost).subscribe(
-//         () => {
-//           console.log('Post created successfully');
-//           // Optionally, redirect or perform other actions
-//         },
-//         (error: any) => {
-//           console.error('Error creating post:', error);
-//           // Handle the error (e.g., show an error message to the user)
-//         }
-//       );
-//     }
 
-//     deletePost(postId: number): void {
-//        this.LocationService.deletePost(postId).subscribe(
-//          () => {
-//             console.log('Post deleted successfully');
-//          },
-//          (         error: any) => {
-//             console.error('Error deleting post:', error);
-//          });
-//     }
+  
+    createPost(Message: string, ImgUrl?: string): void {
+      const newPost = { Message, ImgUrl };
+      this.LocationService.createPost(newPost).subscribe(
+        () => {
+          console.log('Post created successfully');
+        },
+        (error: any) => {
+          console.error('Error creating post:', error);
+        }
+      );
+    }
+
+    deletePost(postId: number): void {
+       this.LocationService.deletePost(postId).subscribe(
+         () => {
+            console.log('Post deleted successfully');
+         },
+         (         error: any) => {
+            console.error('Error deleting post:', error);
+         });
+    }
             
-//     getPostById(postId: number): void {
-//         this.LocationService.getPostById(postId).subscribe(
-//          (          post: any) => {
-//                     this.post = post;
-//           },
-//           (         error: any) => {
-//             console.error('Error fetching post:', error);
-//           });
-//     }
+    getPostById(postId: number): void {
+        this.LocationService.getPostById(postId).subscribe(
+         (          post: any) => {
+                    this.post = post;
+          },
+          (         error: any) => {
+            console.error('Error fetching post:', error);
+          });
+    }
             
             
-//     updatePost(post: Location): void {
-//          this.LocationService.updatePost(post).subscribe(
-//           (         updatedPost: any) => {
-//             console.log('Post updated successfully');              },
-//           (         error: any) => {
-//             console.error('Error updating post:', error);
-//           });
-//     }
+    updatePost(post: Location): void {
+         this.LocationService.updatePost(post).subscribe(
+          (         updatedPost: any) => {
+            console.log('Post updated successfully');              },
+          (         error: any) => {
+            console.error('Error updating post:', error);
+          });
+    }
             
-//     getAllLocations(): void {
-//          this.LocationService.getAllLocations().subscribe((locations: any) => {
-//                   this.locations = locations;
-//           });
-//     }
+    getAllLocations(): void {
+         this.LocationService.getAllLocations().subscribe((locations: any) => {
+                  this.locations = locations;
+          });
+    }
+    
 
    }
 
