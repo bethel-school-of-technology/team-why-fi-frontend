@@ -16,7 +16,7 @@ import { SignUpComponent } from './signup/signup.component';
 import { ReviewsComponent } from './reviews/reviews.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-// import { FavoritesComponent } from './favorites/favorites.component';
+ import { FavoritesComponent } from './favorites/favorites.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
@@ -25,7 +25,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
   declarations: [
     AppComponent,
     HomeComponent,
-    // FavoritesComponent,
+    FavoritesComponent,
     AboutUsComponent,
     NavagationComponent,
     FooterComponent,
