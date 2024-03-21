@@ -17,7 +17,7 @@ export class FavoritesComponent implements OnInit {
 
   ngOnInit(): void {
     this.loadReviews();
-    this.fetchLocationsInfo();
+    this.fetchLocationsInfo()
   }
     loadReviews() {
         throw new Error('Method not implemented.');
