@@ -12,7 +12,7 @@ import { tap } from "rxjs";
     private _userName = "";
     private _user=new User();
   
-    baseURL: string = "http://localhost:5256";  //Link that connects front and backend?
+    baseURL: string = "http://localhost:5256";  //Link that connects front and backend
     tokenKey: string = "myPostToken";
   
     constructor(private http: HttpClient) { }
