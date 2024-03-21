@@ -28,7 +28,7 @@ import { Location } from "../models/location";
     
         
   
-     constructor(public http: HttpClient, private locationService: LocationService) { }
+     constructor(public http: HttpClient) { }
   
 
    getAllPosts(): Observable<Location[]> {
