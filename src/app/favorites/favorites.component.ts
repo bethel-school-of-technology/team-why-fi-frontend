@@ -13,11 +13,11 @@ export class FavoritesComponent implements OnInit {
   imgURL: string = '';
   reviewList: Location[] = [];
 
-  constructor(private locationService: LocationService, private router: Router) {}
+  constructor( private router: Router) {}       //private locationService: LocationService, 
 
   ngOnInit(): void {
     this.loadReviews();
-    this.fetchLocationsInfo();
+    this.fetchLocationsInfo()
   }
     loadReviews() {
         throw new Error('Method not implemented.');
